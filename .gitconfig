@@ -1,0 +1,48 @@
+[alias]
+  amend = commit --amend
+  br = branch
+  ci = commit
+  cl = clone
+  co = checkout
+  df = diff
+  dl = "!git ll -1"
+  dlc = diff --cached HEAD^
+  ds = diff --staged
+  filelog = log -u
+  fl = log -u
+  graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  la = "!git config -l | grep alias | cut -c 7-"
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]%Creset" --decorate --date=relative
+  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]%Creset" --decorate --date=short
+  le = log --oneline --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\\ %C(green)(%cr)%Creset" --decorate --numstat
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\\ %C(green)(%cr)%Creset" --decorate
+  purr = pull --rebase
+  st = status
+  standup = !"git log --no-merges --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=tformat:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d %Creset' --date=local"
+  standupemail = !"git log --no-merges --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=tformat:'%s' --date=local | mail -s \"Standup for $(date +%m-%d-%Y)\" bmarcaur@nearinfinity.com"
+  undo = reset --soft HEAD^
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[core]
+  excludesfile = /Users/wbrady/.gitignore
+  editor = subl -w
+  pager = less -r
+[push]
+  default = current
+[sendemail]
+  from = Brandon Marc-Aurele <bmarcaur@nearinfinity.com>
+  chainreplyto = false
+  confirm = auto
+  suppresscc = all
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = bmarcaur@nearinfinity.com
+  smtpserverport = 587
+[user]
+  name = Brandon Marc-Aurele
+  email = bmarcaur@nearinfinity.com
