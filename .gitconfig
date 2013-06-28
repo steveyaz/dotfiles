@@ -35,14 +35,14 @@
 [push]
   default = current
 [sendemail]
-  from = Brandon Marc-Aurele <bmarcaur@nearinfinity.com>
+  from = Brandon Marc-Aurele <bmarcaur@gmail.com>
   chainreplyto = false
   confirm = auto
   suppresscc = all
   smtpencryption = tls
   smtpserver = smtp.gmail.com
-  smtpuser = bmarcaur@nearinfinity.com
+  smtpuser = bmarcaur@gmail.com
   smtpserverport = 587
 [user]
   name = Brandon Marc-Aurele
-  email = bmarcaur@nearinfinity.com
+  email = bmarcaur@gmail.com
