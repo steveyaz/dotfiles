@@ -11,3 +11,7 @@ fi
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
