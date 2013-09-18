@@ -1,18 +1,33 @@
 [alias]
+  # Ammend
   amend = commit --amend
+  # Branch
   br = branch
+  # Commit
   ci = commit
+  # Clone
   cl = clone
+  # Checkout
   co = checkout
+  # Diff
   df = diff
+  # Diff List (file oriented)
   dl = "!git ll -1"
+  # Diff with cached?
   dlc = diff --cached HEAD^
+  # Diff with staged
   ds = diff --staged
+  # Log with diffs (file oriented)
   filelog = log -u
+  # Alias for filelog
   fl = log -u
+  # Commit graph
   graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  # List git aliases
   la = "!git config -l | grep alias | cut -c 7-"
+  # List date, user
   ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]%Creset" --decorate --date=relative
+  # List short date, user
   lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]%Creset" --decorate --date=short
   le = log --oneline --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\\ %C(green)(%cr)%Creset" --decorate --numstat
@@ -21,7 +36,6 @@
   purr = pull --rebase
   st = status
   standup = !"git log --no-merges --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=tformat:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d %Creset' --date=local"
-  standupemail = !"git log --no-merges --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=tformat:'%s' --date=local | mail -s \"Standup for $(date +%m-%d-%Y)\" bmarcaur@nearinfinity.com"
   undo = reset --soft HEAD^
 [color]
   branch = auto
