@@ -1,5 +1,7 @@
 bash_prompt_command() {
+	# How many characters of the $PWD should be kept
 	local pwdmaxlen=25
+	# Indicate that there has been dir truncation
 	local trunc_symbol=".."
 	local dir=${PWD##*/}
 	pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
@@ -11,6 +13,7 @@ bash_prompt_command() {
 		NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
 	fi
 
+	# Setup variable for current git branch, if available
 	if ! git rev-parse --git-dir > /dev/null 2>&1; then
 		GIT_CURRENT_BRANCH=""
 		GIT_CURRENT_BRANCH_STATE_COLOR=""
@@ -26,17 +29,22 @@ bash_prompt_command() {
 		fi
 		GIT_CURRENT_BRANCH=" [$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')]"
 	fi
+	bash_prompt # call again this function to update PS1 to use corresponding GIT_CURRENT_BRANCH_STATE_COLOR
 }
 
 bash_prompt() {
 	local NONE='\[\033[0m\]'    # unsets color to term's fg color
+
+# NB: Unused Colors disabled
+
+        # regular colors
 	local R='\[\033[0;31m\]'    # red
 	local B='\[\033[0;34m\]'    # blue
 															    
 	local UC=$C                 # user's color
         [ $UID -eq "0" ] && UC=$R   # root's color
 	
-	PS1="${NONE}[\t${NONE}] ${NONE}${B}\${NEW_PWD}${NONE}${G}${GIT_CURRENT_BRANCH_STATE_COLOR}\${GIT_CURRENT_BRANCH}${NONE} \\$ ${NONE}"
+	PS1="${NONE}[\t${NONE}] ${NONE}[${B}\${NEW_PWD}${NONE}]${G}${GIT_CURRENT_BRANCH_STATE_COLOR}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 	SUDO_PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]${G}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 }
 	
