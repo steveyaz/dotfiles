@@ -5,7 +5,7 @@ move() {
 	cp $file $HOME/$file
 }
 
-files=(.bash_profile .bashrc .bash_aliases .gemrc .gitconfig .irbrc .irbrc_rails)
+files=(.bash_profile .bashrc .bash_aliases .gemrc .gitconfig .irbrc .irbrc_rails .vimrc)
 
 for file in ${files[@]}
 do
