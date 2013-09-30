@@ -29,6 +29,12 @@ filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
 syntax on " Enable syntax highlighting
 
+"" Sounds
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
 "" Buffer behaviour
 set hidden " Allow changed buffers to be in back ground
 
