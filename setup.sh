@@ -4,6 +4,9 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 # Make sure it is up to date
 brew update
 
+# Install autocomplete
+brew install bash-completion
+
 # Install GIT
 brew install git
 
