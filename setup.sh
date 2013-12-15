@@ -29,6 +29,8 @@ gem install awesome_print
 gem install interactive_editor
 rbenv rehash
 
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+
 # Unpack Dotfiles
 ./unpack.sh
 
