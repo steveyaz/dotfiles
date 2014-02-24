@@ -25,7 +25,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export EDITOR='subl'
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
-export PALANTIR_HOME=~/palantir/versions/3.12.4.1/dist
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
