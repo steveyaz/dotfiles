@@ -1,15 +1,16 @@
 #!/bin/sh
-move() {
+link() {
 	file=$1
-	echo "Moving file: $file to $HOME"
-	cp $file $HOME/$file
+  current=`pwd`
+  echo "Linking file($file) from $current to $HOME"
+	ln -s $current/$file $HOME/$file
 }
 
-files=(.bash_profile .bashrc .bash_aliases .gemrc .gitconfig .irbrc .irbrc_rails .vimrc)
+files=(.bash_profile .bashrc .bash_aliases .bash_palantir .gemrc .gitconfig .irbrc .irbrc_rails .vimrc)
 
 for file in ${files[@]}
 do
-	move $file
+	link $file
 done
 
 echo "Sourcing the bash_profile"
