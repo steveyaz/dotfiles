@@ -1,0 +1,24 @@
+remove_turrible_jars() {
+  cd $1;
+  rm pg-workspace-*;
+  rm pg-a*;
+  rm joda-time-*;
+  rm guava-*;
+  rm pg-client-*;
+  rm pg-jni-*;
+  rm pg-model-*;
+  rm pg-peering-*;
+  rm pg-shared-*;
+  rm pg-tag-guessing-api-*;
+  rm pg-ui-utilities-*;
+  rm poi-*;
+}
+
+alias pelasticsearch='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
+alias pworkspace='cd ~/palantir/workspace/kessel-run/kessel-run-app'
+alias pproject='cd ~/palantir/workspace/kessel-run/kessel-run-app/plugins/kessel-run-web/src/main/resources'
+alias pcurrent='cd $PALANTIR_HOME/../'
+alias startpcurrent='bash $PALANTIR_HOME/../scripts/StartDispatch.command'
+alias pgeclipse='pworkspace; GRADLE_OPTS=-Xmx2g ./gradlew eclipse --info'
+alias pgclean='pworkspace; GRADLE_OPTS=-Xmx2g ./gradlew clean eclipse --info'
+alias pclearstate='curl -XDELETE http://localhost:9200/storage-user-state'
