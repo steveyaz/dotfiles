@@ -21,6 +21,7 @@ brew install ruby-build
 
 # Install Ruby
 rbenv install 2.0.0-p247
+rbenv global 2.0.0-p247
 
 # Install some gems
 gem install rails
