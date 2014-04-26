@@ -7,9 +7,6 @@ brew update
 # Install autocomplete
 brew install bash-completion
 
-# Install GIT
-brew install git
-
 # Install tree
 brew install tree
 
