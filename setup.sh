@@ -13,6 +13,7 @@ brew install tree
 # Install vim
 brew install vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone git@github.com:Lokaltog/powerline-fonts.git
 vim +PluginInstall +qall
 
 # Install rbenv
