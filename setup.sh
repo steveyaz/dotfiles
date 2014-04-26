@@ -15,6 +15,8 @@ brew install tree
 
 # Install vim
 brew install vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # Install rbenv
 brew install rbenv
