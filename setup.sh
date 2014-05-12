@@ -25,9 +25,8 @@ rbenv install 2.0.0-p247
 rbenv global 2.0.0-p247
 
 # Install some gems
+rbenv rehash
 gem install rails
-gem install awesome_print
-gem install interactive_editor
 rbenv rehash
 
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
