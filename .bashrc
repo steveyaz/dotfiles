@@ -30,6 +30,12 @@ bash_prompt_command() {
 		GIT_CURRENT_BRANCH=" [$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')]"
 	fi
 	bash_prompt # call again this function to update PS1 to use corresponding GIT_CURRENT_BRANCH_STATE_COLOR
+  save_history
+}
+
+save_history() {
+  history -a
+  history 1 >> $HOME/.command_history.full
 }
 
 bash_prompt() {
@@ -53,3 +59,24 @@ bash_prompt
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
+
+# Force multiline commands to one
+shopt -s cmdhist
+
+# Some history magic
+shopt -s histappend
+
+# On Disk buffersize
+export HISTFILESIZE=100000
+
+# Memort Buffer Size
+export HISTSIZE=10000
+
+# Commands to ignore
+export HISTIGNORE="&:bg:fg:ls:ll"
+
+# Add timestamps to the commands
+export HISTTIMEFORMAT="(%F %T %Z) "
+
+# Ignore whitespace and repeated commands
+export HISTCONTROL=ignoreboth
