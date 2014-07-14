@@ -43,7 +43,6 @@
   interactive = auto
   status = auto
 [core]
-  excludesfile = /Users/wbrady/.gitignore
   editor = subl -w
   pager = less -r
 [push]
