@@ -74,7 +74,7 @@ configure_history() {
 
 save_history() {
   history -a
-  history 1 | cut -c 8- >> $HOME/.command_history.full
+  history 1 | cut -c 8- >> $HOME/.history_repo/history.$(date +%Y%m)
 }
 
 PROMPT_COMMAND=bash_prompt_command
