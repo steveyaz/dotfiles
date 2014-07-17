@@ -29,6 +29,12 @@ filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
 syntax on " Enable syntax highlighting
 
+"" Watches for changes in vim configs and automatically refreshes your .vimrc
+augroup myvimrc
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
 "" Sounds
 set noerrorbells visualbell t_vb=
 if has('autocmd')

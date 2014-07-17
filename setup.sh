@@ -10,6 +10,9 @@ brew install bash-completion
 # Install tree
 brew install tree
 
+# Install Python
+brew install python
+
 # Install vim
 brew install vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
