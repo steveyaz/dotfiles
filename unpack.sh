@@ -6,7 +6,7 @@ link() {
 	ln -s $current/$file $HOME/$file
 }
 
-files=(.bash_profile .bashrc .bash_aliases .bash_palantir .gemrc .gitconfig .irbrc .irbrc_rails .vimrc)
+files=(.bash_profile .bashrc .bash_aliases .bash_palantir .gemrc .gitconfig .irbrc .irbrc_rails .vimrc .gitignore)
 
 for file in ${files[@]}
 do

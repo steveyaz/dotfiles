@@ -45,6 +45,7 @@
 [core]
   editor = subl -w
   pager = less -r
+  excludesfile = ~/.gitignore
 [push]
   default = current
 [sendemail]
