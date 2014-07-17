@@ -19,7 +19,7 @@ bash_prompt_command() {
 		GIT_CURRENT_BRANCH_STATE_COLOR=""
 	else
 		if ! git diff --quiet 2>/dev/null >&2; then
-			GIT_CURRENT_BRANCH_STATE_COLOR='\[\033[0;31m\]' #git dirty HEAD 
+			GIT_CURRENT_BRANCH_STATE_COLOR='\[\033[0;31m\]' #git dirty HEAD
 		else
 			if ! git diff --cached --quiet 2>/dev/null >&2; then
 				GIT_CURRENT_BRANCH_STATE_COLOR='\[\033[0;33m\]' #git dirty index
@@ -33,50 +33,57 @@ bash_prompt_command() {
   save_history
 }
 
-save_history() {
-  history -a
-  history 1 >> $HOME/.command_history.full
-}
-
 bash_prompt() {
 	local NONE='\[\033[0m\]'    # unsets color to term's fg color
 
 # NB: Unused Colors disabled
 
-        # regular colors
+  # regular colors
 	local R='\[\033[0;31m\]'    # red
 	local B='\[\033[0;34m\]'    # blue
-															    
+
 	local UC=$C                 # user's color
-        [ $UID -eq "0" ] && UC=$R   # root's color
-	
+  [ $UID -eq "0" ] && UC=$R   # root's color
+
 	PS1="${NONE}[\t${NONE}] ${NONE}[${B}\${NEW_PWD}${NONE}]${G}${GIT_CURRENT_BRANCH_STATE_COLOR}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 	SUDO_PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]${G}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 }
-	
-PROMPT_COMMAND=bash_prompt_command 
+
+configure_history() {
+	# Force multiline commands to one
+	shopt -s cmdhist
+
+	# Some history magic
+	shopt -s histappend
+
+	# On Disk buffersize
+	export HISTFILESIZE=100000
+
+	# Memort Buffer Size
+	export HISTSIZE=10000
+
+	# Commands to ignore
+	export HISTIGNORE="&:bg:fg:ls:ll"
+
+	# Add timestamps to the commands
+	export HISTTIMEFORMAT="(%F %T %Z) "
+
+	# Ignore whitespace and repeated commands
+	export HISTCONTROL=ignoreboth
+}
+
+save_history() {
+  history -a
+  history 1 | cut -c 8- >> $HOME/.command_history.full
+}
+
+PROMPT_COMMAND=bash_prompt_command
+
+# Load bash config
 bash_prompt
+
+# Load Hist config
+configure_history
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
-
-# Force multiline commands to one
-shopt -s cmdhist
-
-# Some history magic
-shopt -s histappend
-
-# On Disk buffersize
-export HISTFILESIZE=100000
-
-# Memort Buffer Size
-export HISTSIZE=10000
-
-# Commands to ignore
-export HISTIGNORE="&:bg:fg:ls:ll"
-
-# Add timestamps to the commands
-export HISTTIMEFORMAT="(%F %T %Z) "
-
-# Ignore whitespace and repeated commands
-export HISTCONTROL=ignoreboth
