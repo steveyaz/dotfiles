@@ -24,7 +24,7 @@ fi
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export EDITOR='subl'
 
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+export JAVA_HOME=`/usr/libexec/java_home -v '1.7*'`
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
