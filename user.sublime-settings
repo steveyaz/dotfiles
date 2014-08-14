@@ -1,0 +1,10 @@
+{
+  "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+  "font_size": 24.0,
+  "font_face": "Inconsolata for Powerline",
+  "folder_exclude_patterns": [".git", ".ecbuild", ".settings", ".gradle"],
+  "file_exclude_patterns": [".classpath", ".project"],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "scroll_past_end": false
+}
