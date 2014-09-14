@@ -24,5 +24,12 @@ do
   link $vim_folder
 done
 
+# Setup sublime user preferences
+pref_dest="$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+# back it up just in case
+mv "$pref_dest" "$pref_dest.bak"
+# symlink to track the changes
+ln -s $current/user.sublime-settings "$pref_dest"
+
 echo "Sourcing the bash_profile"
 source $HOME/.bash_profile
