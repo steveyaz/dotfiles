@@ -86,6 +86,7 @@ set nostartofline " Don't jump to start of line with movements
 
 "" Files
 set autoread " Automatically read changed files
+au BufReadCmd   *.jar,*.war,*.ear,*.sar,*.rar        call zip#Browse(expand("<amatch>"))
 
 "" Theme
 set background=dark
