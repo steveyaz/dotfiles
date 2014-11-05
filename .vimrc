@@ -20,6 +20,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/vitality.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'motus/pig.vim'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
