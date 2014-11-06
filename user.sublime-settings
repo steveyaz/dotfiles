@@ -1,5 +1,4 @@
 {
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"file_exclude_patterns":
 	[
 		".classpath",
@@ -24,6 +23,8 @@
 	],
 	"scroll_past_end": false,
 	"tab_size": 2,
+	"theme": "Sodarized Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"word_wrap": "false"
 }

@@ -13,6 +13,10 @@ brew install tree
 # Install Python
 brew install python
 
+# Install GNU Tools
+brew install gnu-tar
+brew install gnu-sed
+
 # Install vim
 brew install vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -36,7 +40,7 @@ rbenv rehash
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # Make the commandhistory repo
-mkdir -p ~/history_repo
+mkdir -p ~/.history_repo
 
 # Unpack Dotfiles
 ./unpack.sh
