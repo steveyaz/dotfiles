@@ -43,5 +43,5 @@ ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/lo
 mkdir -p ~/.history_repo
 
 # Unpack Dotfiles
-./unpack.sh
+./setup/dotfiles.sh
 
