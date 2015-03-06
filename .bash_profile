@@ -26,7 +26,8 @@ export EDITOR='subl'
 
 export JAVA_6=`/usr/libexec/java_home -v '1.6*'`
 export JAVA_7=`/usr/libexec/java_home -v '1.7*'`
-export JAVA_HOME=$JAVA_6
+export JAVA_8=`/usr/libexec/java_home -v '1.8*'`
+export JAVA_HOME=$JAVA_8
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
