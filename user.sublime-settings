@@ -16,14 +16,17 @@
 		".settings",
 		".gradle",
 		"build",
-		".bundle"
+		".bundle",
+		".idea",
+		"compiler_cache"
 	],
 	"font_face": "Inconsolata for Powerline",
-	"font_size": 22.0,
+	"font_size": 18.0,
 	"ignored_packages":
 	[
 	],
 	"scroll_past_end": false,
+	"sort_keys": true,
 	"tab_size": 2,
 	"theme": "Sodarized Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
