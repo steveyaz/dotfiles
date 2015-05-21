@@ -12,6 +12,7 @@ alias gw='./gradlew'
 greprails() { grep $1 -r --exclude-dir="coverage" --exclude-dir="tmp" $2; }
 far() { find $1 -type f -name '*' -exec sed -i '' s/$2/$3/g {} + ; }
 gitme() { git $1 --author=$(git config --get user.email); }
+find_port() { lsof -i tcp:$1; }
 
 git-size() {
   # Shows you the largest objects in your repo's pack file.
