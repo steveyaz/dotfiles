@@ -62,3 +62,7 @@
   email = bmarcaur@gmail.com
 [github]
   user = bmarcaur
+[rerere]
+	enabled = false
+[merge]
+	conflictstyle = diff3
