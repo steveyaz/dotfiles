@@ -1,0 +1,19 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Apache Pig",
+		"CoffeeScript",
+		"Color Highlighter",
+		"Gitignore",
+		"Handlebars",
+		"JSON Reindent",
+		"LESS",
+		"Package Control",
+		"Solarized Color Scheme",
+		"Theme - Sodarized"
+	]
+}

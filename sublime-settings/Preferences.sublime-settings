@@ -18,7 +18,8 @@
 		"build",
 		".bundle",
 		".idea",
-		"compiler_cache"
+		"compiler_cache",
+		"application/log"
 	],
 	"font_face": "Inconsolata for Powerline",
 	"font_size": 16.0,
