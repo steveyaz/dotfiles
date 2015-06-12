@@ -3,4 +3,6 @@
 
 *~
 
-.DS_STORE
+.DS_Store
+*.last-run
+*.cache
