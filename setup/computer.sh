@@ -37,7 +37,7 @@ gem install rails
 rbenv rehash
 
 # Symlink sublime for editor
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # Make the commandhistory repo
 mkdir -p ~/.history_repo
