@@ -24,7 +24,7 @@ fi
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export EDITOR='subl'
 
-export JAVA_6=`/usr/libexec/java_home -v '1.6*'`
+#export JAVA_6=`/usr/libexec/java_home -v '1.6*'`
 export JAVA_7=`/usr/libexec/java_home -v '1.7*'`
 export JAVA_8=`/usr/libexec/java_home -v '1.8*'`
 export JAVA_HOME=$JAVA_8
