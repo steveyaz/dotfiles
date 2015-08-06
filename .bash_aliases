@@ -14,7 +14,7 @@ far() { find $1 -type f -name '*' -exec sed -i '' s/$2/$3/g {} + ; }
 gitme() { git $1 --author=$(git config --get user.email); }
 find_port() { lsof -i tcp:$1; }
 
-git-size() {
+git_size() {
   # Shows you the largest objects in your repo's pack file.
   # Written for osx.
   #

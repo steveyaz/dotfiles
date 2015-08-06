@@ -1,8 +1,8 @@
 export GRADLE_OPTS=-Xmx2g
 
-alias pelasticsearch='elasticsearch -Des.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
-alias pclearstate='curl -XDELETE http://localhost:9200/storage-user-state'
-alias pbuild='gw clean cleanEclipse eclipse'
+#alias pelasticsearch='elasticsearch -Des.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
+#alias pclearstate='curl -XDELETE http://localhost:9200/storage-user-state'
+#alias pbuild='gw clean cleanEclipse eclipse'
 
 function pquickstart() {
   /Volumes/git/palantir/quickstarts/$1/scripts/StartDispatch.command
