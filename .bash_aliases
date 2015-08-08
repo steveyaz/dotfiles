@@ -2,7 +2,7 @@ alias reload='source ~/.bash_profile'
 alias reload_prompt='source ~/.bashrc'
 
 alias cls='printf "\033c"'
-alias ll="ls -a1"
+alias ll="ls -al"
 alias gits='git st'
 alias gita='git add -A :/'
 alias gitd='git df'
