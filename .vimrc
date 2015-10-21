@@ -90,6 +90,7 @@ set autoread " Automatically read changed files
 au BufReadCmd   *.jar,*.war,*.ear,*.sar,*.rar        call zip#Browse(expand("<amatch>"))
 
 "" Theme
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h16 "Font

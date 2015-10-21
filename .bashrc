@@ -47,7 +47,7 @@ bash_prompt() {
 	local UC=$C                 # user's color
   [ $UID -eq "0" ] && UC=$R   # root's color
 
-	PS1="${NONE}[\t${NONE}] ${NONE}[${P}\h${NONE}] ${NONE}[${B}\${NEW_PWD}${NONE}]${G}${GIT_CURRENT_BRANCH_STATE_COLOR}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
+	PS1="${NONE}[\t${NONE}] ${NONE}[${B}\${NEW_PWD}${NONE}]${G}${GIT_CURRENT_BRANCH_STATE_COLOR}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 	SUDO_PS1="${NONE}[\t${NONE}] ${NONE}[${R}\u${R}@${R}\h ${B}\${NEW_PWD}${NONE}]${G}\${GIT_CURRENT_BRANCH}${NONE}\\$ ${NONE}"
 }
 
