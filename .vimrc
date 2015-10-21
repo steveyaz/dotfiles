@@ -26,6 +26,7 @@ filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
 syntax on " Enable syntax highlighting
 
+"" Set up Leader
 let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :wq<CR>
