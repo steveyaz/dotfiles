@@ -81,6 +81,17 @@ save_history() {
 
 PROMPT_COMMAND=bash_prompt_command
 
+# Switch between Java versions
+function java7(){
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
+  java -version
+}
+
+function java8(){
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
+  java -version
+}
+
 # Load bash config
 bash_prompt
 
