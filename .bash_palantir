@@ -1,9 +1,6 @@
-export GRADLE_OPTS=-Xmx2g
-
-#alias pelasticsearch='elasticsearch -Des.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
-#alias pclearstate='curl -XDELETE http://localhost:9200/storage-user-state'
-#alias pbuild='gw clean cleanEclipse eclipse'
-
-function pquickstart() {
-  /Volumes/git/palantir/quickstarts/$1/scripts/StartDispatch.command
-}
+alias pip='/usr/local/bin/pip3'
+export NPM_CONFIG_CAFILE=/etc/ssl/certs/palantir-ca-bundle.crt
+export NPM_CONFIG_REGISTRY=https://artifactory.palantir.build/artifactory/api/npm/all-npm/
+export SSL_CERT_FILE=/etc/ssl/certs/Palantir3rdGenerationRootCA.pem
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/Palantir3rdGenerationRootCA.pem
+export JAVA_HOME=$("/usr/libexec/java_home" -v "1.8")

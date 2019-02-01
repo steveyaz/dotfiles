@@ -7,7 +7,7 @@ link() {
 }
 
 # Symlink dotfiles
-files=(.bash_profile .bashrc .bash_aliases .bash_palantir .gemrc .gitconfig .vimrc .gitignore)
+files=(.bash_profile .bashrc .bash_aliases .bash_palantir .gitconfig .vimrc .gitignore .vim)
 
 for file in ${files[@]}
 do
@@ -15,21 +15,17 @@ do
 done
 
 # Ensure the .vim folder exists
-mkdir $HOME/.vim
+#mkdir $HOME/.vim
 
 # Symlink vim folder
-current=`pwd`
-for vim_folder in `ls $current/.vim`
-do
-  link $vim_folder
-done
+#current=`pwd`
+#for vim_folder in `ls $current/.vim`
+#do
+#  link $vim_folder
+#done
 
-# Setup sublime user preferences
-pref_dest="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-# back it up just in case
-mv "$pref_dest" "$pref_dest.bak.$(date +%Y%m%d.%H%M%S)"
-# symlink to track the changes
-ln -s $current/sublime-settings/ "$pref_dest"
+# Make the commandhistory repo
+mkdir -p ~/.history_repo
 
 echo "Sourcing the bash_profile"
 source $HOME/.bash_profile

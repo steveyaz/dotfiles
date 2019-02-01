@@ -3,24 +3,24 @@ set nocompatible " Behave like vim, not vi
 
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#rc()
 
 " let Vundle manage Vundle, required.
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
 " Plugins:
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'godlygeek/tabular'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/powerline'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/vitality.vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'motus/pig.vim'
+" Bundle 'altercation/vim-colors-solarized'
+" Bundle 'godlygeek/tabular'
+" Bundle 'kien/ctrlp.vim'
+" Bundle 'Lokaltog/powerline'
+" Bundle 'majutsushi/tagbar'
+" Bundle 'scrooloose/nerdcommenter'
+" Bundle 'scrooloose/syntastic'
+" Bundle 'sjl/vitality.vim'
+" Bundle 'tpope/vim-repeat'
+" Bundle 'tpope/vim-surround'
+" Bundle 'motus/pig.vim'
 
 filetype plugin on " Enable filetype plugins
 filetype indent on " Enable filetype specific indent rules
@@ -104,6 +104,8 @@ au BufReadCmd   *.jar,*.war,*.ear,*.sar,*.rar        call zip#Browse(expand("<am
 "" Theme
 let g:solarized_termcolors=256
 set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h16 "Font
 set t_Co=256 " Tell terminal to use 256 colors
