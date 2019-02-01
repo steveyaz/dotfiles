@@ -112,16 +112,10 @@ set t_Co=256 " Tell terminal to use 256 colors
 set title " Turn on title bar support
 
 "" Mouse settings
-set mouse=a " Enable mouse
-set ttymouse=xterm2 " Use mouse scrolling in terminal window
+"" set mouse=a " Enable mouse
+"" set ttymouse=xterm2 " Use mouse scrolling in terminal window
 
 """ Plugin Configuration
-
-"" Powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-set noshowmode
 
 "" Tagbar
 nmap <Leader>t :TagbarToggle<CR>

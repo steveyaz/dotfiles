@@ -50,19 +50,19 @@
 [push]
   default = current
 [sendemail]
-  from = Brandon Marc-Aurele <bmarcaur@gmail.com>
+  from = Steve Yazicioglu <steve.yazicioglu@gmail.com>
   chainreplyto = false
   confirm = auto
   suppresscc = all
   smtpencryption = tls
   smtpserver = smtp.gmail.com
-  smtpuser = bmarcaur@gmail.com
+  smtpuser = steve.yazicioglu@gmail.com
   smtpserverport = 587
 [user]
-  name = Brandon Marc-Aurele
-  email = bmarcaur@gmail.com
+  name = Steve Yazicioglu
+  email = steve.yazicioglu@gmail.com
 [github]
-  user = bmarcaur
+  user = steveyaz
 [rerere]
 	enabled = false
 [merge]
